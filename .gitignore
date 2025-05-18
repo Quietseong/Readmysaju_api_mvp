@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+data/*
+!data/system_prompt.txt
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 환경 변수
+.env
+!.env.example
+
+# 가상환경
+.venv/
+venv/
+ENV/
+
+# 기타
+.DS_Store 
