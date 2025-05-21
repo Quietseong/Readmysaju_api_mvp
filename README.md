@@ -5,17 +5,16 @@
 ## 프로젝트 구조
 ```
 ReadMySaju_chat/
-├── .env.example           # 환경 변수 예시 파일
-├── .gitignore            # Git 무시 파일
-├── README.md             # 프로젝트 설명
-├── requirements.txt      # pip 의존성 파일
-├── pyproject.toml        # Poetry 설정 파일
-├── data/                 # 데이터 디렉토리
+├── src/
+│   ├── __init__.py
+│   ├── chat.py
+│   ├── api.py
+│   └── main.py
+├── data/
 │   └── system_prompt.json
-├── src/                  # 소스 코드 디렉토리
-│   └── chat.py
-└── notebooks/            # Jupyter 노트북 디렉토리
-    └── base.ipynb
+├── notebooks/
+│   └── base.ipynb
+└── requirements.txt
 ```
 
 ## 설치 방법
