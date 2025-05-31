@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List, Optional
-from .chat import Chat
+from chat import Chat
 
 app = FastAPI(
     title="ReadMySaju API",
