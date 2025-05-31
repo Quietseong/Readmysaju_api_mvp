@@ -18,13 +18,13 @@ class Tone:
     example: str
 
 class Chat:
-    def __init__(self, system_content_path: str = "data/system_prompt.json"):
+    def __init__(self, system_content_path: str = "../data/system_prompt.json"):
         """
         Chat 클래스의 초기화 함수입니다.
         
         Args:
             system_content_path (str): 시스템 프롬프트가 저장된 JSON 파일의 경로입니다.
-                기본값은 'data/system_prompt.json'입니다.
+                기본값은 '../data/system_prompt.json'입니다.
         """
         # JSON 파일에서 시스템 프롬프트를 읽어옵니다
         with open(system_content_path, 'r', encoding='utf-8') as f:
@@ -116,7 +116,7 @@ class Chat:
         for i in range(max_retries):
             try:
                 self.response = openai.chat.completions.create(
-                    model="gpt-4.1-nano-2025-04-14",
+                    model="gpt-3.5-turbo",
                     messages=self.messages,
                     temperature=0.7,
                     top_p=0.8
@@ -126,7 +126,7 @@ class Chat:
                 if i == max_retries - 1:
                     raise e
                 else:
-                    print(f"Excepption {e}. Retrying in {wait_time} seconds...")
+                    print(f"Exception {e}. Retrying in {wait_time} seconds...")
                     time.sleep(wait_time)
                     wait_time *= 2
 
@@ -158,7 +158,7 @@ class Chat:
         
         # GPT에 쿼리
         self.response = openai.chat.completions.create(
-            model="gpt-4.1-nano-2025-04-14",
+            model="gpt-3.5-turbo",
             messages=temp_messages,
             temperature=0.7,
             top_p=0.8

@@ -7,3 +7,7 @@ requests>=2.25.0
 # Jupyter Notebook 및 Gradio UI 실행 시 필요 (선택적)
 gradio>=4.0.0
 ipython>=8.0.0 # IPython.display 사용 시 
+
+
+# 평가 테스트 시 필요
+deepeval
